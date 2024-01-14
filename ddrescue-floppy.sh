@@ -31,7 +31,7 @@ fi
 # -i flag?
 FLOPPY_VOL_ID=$(dosfslabel $FLOPPY_DEV || echo INVALID)
 #IMG_ID=${ID_FS_LABEL_SAFE}_${ID_FS_UUID}_$(date +%s)
-IMG_ID=FLOPPY${LABEL}_${FLOPPY_VOL_ID}_$(date +%s)
+IMG_ID=FLOPPY_${LABEL}_${FLOPPY_VOL_ID}_$(date +%s)
 
 date
 echo "Writing to $IMG_ID.*"
