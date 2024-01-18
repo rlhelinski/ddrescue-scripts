@@ -43,6 +43,10 @@ fi
 
 
 for image_path in $image_paths ; do
+    if [ ! -f "$image_path" ] ; then
+        echo "$image_path not found"
+        continue
+    fi
     image_basename=`basename "$image_path" .img`
     if [ ! -d "$image_basename" ]; then mkdir "$image_basename" ; fi
 
